@@ -19,6 +19,16 @@
         <item name="windowNoTitle">true</item>
         <item name="android:statusBarColor">#1cc9dc</item>
     </style>
+    <style name="AppTheme.NoActionBar" parent="Theme.MaterialComponents.Light.NoActionBar">
+    </style>
+    <style name="AppTheme.FullScreen" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <style name="AppTheme.FullScreenNoActionBar" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+
 
     <style name="Theme.AutoPlus.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
