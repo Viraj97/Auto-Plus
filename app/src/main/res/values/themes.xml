@@ -17,6 +17,7 @@
     <style name="Theme.AutoPlus.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">#1cc9dc</item>
     </style>
 
     <style name="Theme.AutoPlus.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
