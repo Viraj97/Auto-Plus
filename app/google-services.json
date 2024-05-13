@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "838930235052",
+    "project_id": "autoplus-49b10",
+    "storage_bucket": "autoplus-49b10.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:838930235052:android:3e8a2be2f457d424d3e909",
+        "android_client_info": {
+          "package_name": "com.example.autoplus"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB01aa1zAejWSpK_cTkQ4jvCqVt0fHVlko"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
