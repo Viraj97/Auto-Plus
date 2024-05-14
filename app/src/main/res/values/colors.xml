@@ -12,5 +12,8 @@
     <color name="embossed_border_color">#FFFFFF</color>
     <color name="app_color">#006FBA</color>
     <color name="link_color">#006FBA</color>
+    <color name="menuTileBackground">#B3E6FF</color>
+    <color name="menuTileBackground2">#96D9FA</color>
+    <color name="menuTileBackground3">#77D0FB</color>
 
 </resources>
