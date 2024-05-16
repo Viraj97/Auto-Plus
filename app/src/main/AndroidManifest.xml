@@ -33,7 +33,10 @@
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".RegisterActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
-
+        <activity android:name=".MyVehiclesActivity"
+            android:theme="@style/Theme.AutoPlus.NoActionBar"/>
+        <activity android:name=".AddNewVehicleActivity"
+            android:theme="@style/Theme.AutoPlus.NoActionBar"/>
     </application>
 
 
