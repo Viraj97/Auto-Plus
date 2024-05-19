@@ -42,6 +42,16 @@
             android:theme="@style/Theme.AutoPlus.NoActionBar"/>
         <activity android:name=".EmergencyServicesActivity"
             android:theme="@style/Theme.AutoPlus.NoActionBar"/>
+        <activity android:name=".PromosDiscountsActivity"
+            android:theme="@style/Theme.AutoPlus.NoActionBar"/>
+        <activity android:name=".EditMyVehicleActivity"
+            android:theme="@style/Theme.AutoPlus.NoActionBar"/>
+        <activity android:name=".ActivityRequetsHistory"
+            android:theme="@style/Theme.AutoPlus.NoActionBar"/>
+        <activity android:name=".ActivityOngoingStatus"
+            android:theme="@style/Theme.AutoPlus.NoActionBar"/>
+        <activity android:name=".NewAppointmentActivity"
+            android:theme="@style/Theme.AutoPlus.NoActionBar"/>
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDHh85NFr5LGrUPajYGQsm4SobRRZrCnoU" />

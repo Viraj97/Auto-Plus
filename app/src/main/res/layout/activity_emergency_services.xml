@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-        <!-- Map Fragment -->
         <fragment
             android:id="@+id/map"
             android:name="com.google.android.gms.maps.SupportMapFragment"
@@ -13,7 +12,6 @@
             android:layout_height="match_parent"
             tools:context=".EmergencyServicesActivity" />
 
-        <!-- Back Button -->
         <ImageButton
             android:id="@+id/back_button"
             android:layout_width="wrap_content"
@@ -23,7 +21,6 @@
             android:contentDescription="back"
             android:layout_margin="16dp" />
 
-        <!-- Buttons Layout -->
         <RelativeLayout
             android:id="@+id/buttons_layout"
             android:layout_width="match_parent"
@@ -33,7 +30,6 @@
             android:layout_marginTop="483dp"
             android:layout_marginEnd="16dp">
 
-                <!-- Three Buttons in Top Center -->
                 <Button
                     android:id="@+id/carrier"
                     android:layout_width="wrap_content"

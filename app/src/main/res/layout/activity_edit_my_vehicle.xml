@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/carbackground">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/buttonBack"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:src="@drawable/ic_menu_camera"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/textViewEditMyVehicle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52dp"
+            android:text="Edit Your Vehicle"
+            android:textColor="@color/app_color"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.342"
+            app:layout_constraintStart_toEndOf="@id/buttonBack"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextEditVehicleNumber"
+            android:layout_width="900px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/edit_text_background"
+            android:gravity="center"
+            android:padding="12dp"
+            android:textColorHint="@color/embossed_text_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints"
+            android:hint="Vehicle Number"
+            app:layout_constraintTop_toBottomOf="@+id/textViewEditMyVehicle" />
+
+        <EditText
+            android:id="@+id/editTextEditBrand"
+            android:layout_width="900px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/edit_text_background"
+            android:gravity="center"
+            android:hint="Brand"
+            android:padding="12dp"
+            android:textColorHint="@color/embossed_text_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintTop_toBottomOf="@id/editTextEditVehicleNumber"/>
+
+        <EditText
+            android:id="@+id/editTextEditModel"
+            android:layout_width="900px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/edit_text_background"
+            android:gravity="center"
+            android:hint="Model"
+            android:padding="12dp"
+            android:textColorHint="@color/embossed_text_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintTop_toBottomOf="@id/editTextEditBrand"/>
+
+        <EditText
+            android:id="@+id/editTextEditManufactureYear"
+            android:layout_width="900px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/edit_text_background"
+            android:gravity="center"
+            android:hint="Manufacture Year"
+            android:padding="12dp"
+            android:textColorHint="@color/embossed_text_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintTop_toBottomOf="@id/editTextEditModel"/>
+
+        <EditText
+            android:id="@+id/editTextEditODO"
+            android:layout_width="900px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/edit_text_background"
+            android:gravity="center"
+            android:hint="ODO Meter Reading"
+            android:padding="12dp"
+            android:textColorHint="@color/embossed_text_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintTop_toBottomOf="@id/editTextEditManufactureYear"/>
+
+        <EditText
+            android:id="@+id/editTextEditColor"
+            android:layout_width="900px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/edit_text_background"
+            android:gravity="center"
+            android:hint="Color"
+            android:padding="12dp"
+            android:textColorHint="@color/embossed_text_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintTop_toBottomOf="@id/editTextEditODO"/>
+
+        <Button
+            android:id="@+id/buttonSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            app:layout_constraintTop_toBottomOf="@+id/editTextEditColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -7,10 +7,9 @@
     android:layout_height="match_parent"
     android:background="@drawable/carbackground">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
         <ImageButton
             android:id="@+id/buttonBack"
@@ -18,6 +17,7 @@
             android:layout_height="100px"
             android:src="@drawable/ic_menu_camera"
             android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_alignParentStart="true"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"/>
 
@@ -26,43 +26,41 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="52dp"
-            android:text="My Vehicles"
+            android:text="Promos And Discounts"
             android:textColor="@color/app_color"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:layout_gravity="center_horizontal" />
+            android:layout_toEndOf="@id/buttonBack"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"/>
 
-        <ProgressBar
-            android:id="@+id/progressBarLoading"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:layout_gravity="center" />
-
-        <ScrollView
+        <Spinner
+            android:id="@+id/vehicleSpinner"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:layout_marginTop="20dp">
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewAddNewVehicle"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp" />
 
-            <LinearLayout
-                android:id="@+id/scrollViewContainerLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="20dp" />
-
-        </ScrollView>
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fabAddVehicle"
+        <TextView
+            android:id="@+id/promos_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:src="@drawable/add"
-            android:layout_gravity="end" />
+            android:text="Promos for selected vehicle:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_below="@id/vehicleSpinner"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp" />
 
-    </LinearLayout>
-
+        <ListView
+            android:id="@+id/promos_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/promos_title"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp" />
+    </RelativeLayout>
 </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

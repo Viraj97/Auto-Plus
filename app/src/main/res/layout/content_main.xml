@@ -32,7 +32,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="30px"
                     android:layout_weight="1"
-                    android:background="@drawable/rounded_corner"
+                    android:background="@drawable/rounded_corner_desabled"
                     android:elevation="15dp"
                     android:gravity="center_horizontal"
                     android:orientation="vertical">
@@ -47,6 +47,8 @@
                         android:onClick="onButton1Click"
                         android:padding="16dp"
                         android:scaleType="fitCenter"
+                        android:clickable="false"
+                        android:enabled="false"
                         android:src="@drawable/appointment" />
 
                     <TextView
@@ -92,79 +94,6 @@
                 </LinearLayout>
 
             </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="30px"
-                    android:layout_weight="1"
-                    android:background="@drawable/rounded_corner"
-                    android:elevation="15dp"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical">
-
-                    <ImageButton
-                        android:id="@+id/history"
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
-                        android:layout_margin="8dp"
-                        android:background="?attr/selectableItemBackground"
-                        android:contentDescription=""
-                        android:onClick="onButton1Click"
-                        android:padding="16dp"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/history" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:text="Request History"
-                        android:textColor="@android:color/black"
-                        android:textSize="16sp" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="30px"
-                    android:layout_weight="1"
-                    android:background="@drawable/rounded_corner"
-                    android:elevation="15dp"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical">
-
-                    <ImageButton
-                        android:id="@+id/status"
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
-                        android:layout_margin="8dp"
-                        android:background="?attr/selectableItemBackground"
-                        android:contentDescription=""
-                        android:onClick="onButton2Click"
-                        android:padding="16dp"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/ongoing" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:text="Ongoing Status"
-                        android:textColor="@android:color/black"
-                        android:textSize="16sp" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -230,6 +159,81 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
                         android:text="Emergency Services"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="30px"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_corner_desabled"
+                    android:elevation="15dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/history"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_margin="8dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:contentDescription=""
+                        android:onClick="onButton1Click"
+                        android:padding="16dp"
+                        android:scaleType="fitCenter"
+                        android:clickable="false"
+                        android:enabled="false"
+                        android:src="@drawable/history" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="Request History"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="30px"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_corner_desabled"
+                    android:elevation="15dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/status"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_margin="8dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:contentDescription=""
+                        android:onClick="onButton2Click"
+                        android:padding="16dp"
+                        android:scaleType="fitCenter"
+                        android:clickable="false"
+                        android:enabled="false"
+                        android:src="@drawable/ongoing" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="Ongoing Status"
                         android:textColor="@android:color/black"
                         android:textSize="16sp" />
 

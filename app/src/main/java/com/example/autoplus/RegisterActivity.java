@@ -18,6 +18,11 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -26,6 +31,9 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText editTextPassword;
     private EditText editTextPhoneNumber;
     private Button buttonRegister;
+
+    private FirebaseAuth mAuth;
+    private FirebaseFirestore db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,10 +47,12 @@ public class RegisterActivity extends AppCompatActivity {
         buttonRegister = findViewById(R.id.buttonRegister);
         TextView textViewBackToLogin = findViewById(R.id.textViewBackToLogin);
 
+        mAuth = FirebaseAuth.getInstance();
+        db = FirebaseFirestore.getInstance();
+
         textViewBackToLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Navigate to MainActivity
                 startActivity(new Intent(RegisterActivity.this, MainActivity.class));
                 finish();
             }
@@ -62,20 +72,17 @@ public class RegisterActivity extends AppCompatActivity {
         String password = editTextPassword.getText().toString().trim();
         String phoneNumber = editTextPhoneNumber.getText().toString().trim();
 
-        // Validate input fields
         if (TextUtils.isEmpty(name) || TextUtils.isEmpty(email) || TextUtils.isEmpty(password) || TextUtils.isEmpty(phoneNumber)) {
             Toast.makeText(this, "All fields are required", Toast.LENGTH_SHORT).show();
             return;
         }
 
-        // Register with Firebase
-        FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
+        mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            // Registration successful, update user profile
-                            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                            FirebaseUser user = mAuth.getCurrentUser();
                             UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
                                     .setDisplayName(name)
                                     .build();
@@ -85,9 +92,8 @@ public class RegisterActivity extends AppCompatActivity {
                                         @Override
                                         public void onComplete(@NonNull Task<Void> task) {
                                             if (task.isSuccessful()) {
-                                                // User profile updated successfully
                                                 Toast.makeText(RegisterActivity.this, "Registration successful", Toast.LENGTH_SHORT).show();
-                                                // Navigate to MainActivity
+                                                addPromoRecord(user.getUid(), name);
                                                 startActivity(new Intent(RegisterActivity.this, MainActivity.class));
                                                 finish();
                                             }
@@ -98,5 +104,15 @@ public class RegisterActivity extends AppCompatActivity {
                         }
                     }
                 });
+    }
+
+    private void addPromoRecord(String userId, String name) {
+        Map<String, Object> promoData = new HashMap<>();
+        promoData.put("name", name);
+        promoData.put("vehicleNumbers", new ArrayList<String>());
+
+        db.collection("Promos")
+                .document(userId)
+                .set(promoData);
     }
 }
