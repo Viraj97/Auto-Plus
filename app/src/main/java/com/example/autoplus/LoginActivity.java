@@ -38,7 +38,8 @@ public class LoginActivity extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
 
-        TextView textViewForgotPassword = findViewById(R.id.textViewForgotPassword);
+        //TODO = complete the forgot password
+//        TextView textViewForgotPassword = findViewById(R.id.textViewForgotPassword);
 
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,18 +48,17 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        textViewForgotPassword.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Open ForgotPasswordActivity
-                startActivity(new Intent(LoginActivity.this, ForgotPasswordActivity.class));
-            }
-        });
+//        textViewForgotPassword.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                // Open ForgotPasswordActivity
+//                startActivity(new Intent(LoginActivity.this, ForgotPasswordActivity.class));
+//            }
+//        });
 
         textViewRegisterLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Open RegisterActivity
                 startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
             }
         });
@@ -68,7 +68,6 @@ public class LoginActivity extends AppCompatActivity {
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
 
-        // Validate input fields
         if (TextUtils.isEmpty(email)) {
             editTextEmail.setError("Email is required");
             return;
@@ -79,7 +78,6 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
 
-        // Authenticate with Firebase
         firebaseAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override

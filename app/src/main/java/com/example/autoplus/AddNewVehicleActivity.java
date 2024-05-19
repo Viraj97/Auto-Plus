@@ -11,9 +11,12 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class AddNewVehicleActivity extends AppCompatActivity {
@@ -62,6 +65,7 @@ public class AddNewVehicleActivity extends AppCompatActivity {
             Toast.makeText(this, "All fields are required", Toast.LENGTH_SHORT).show();
             return;
         }
+
         Map<String, Object> vehicle = new HashMap<>();
         vehicle.put("userId", userId);
         vehicle.put("vehicleNumber", vehicleNumber);
@@ -70,16 +74,31 @@ public class AddNewVehicleActivity extends AppCompatActivity {
         vehicle.put("manufactureYear", manufactureYear);
         vehicle.put("odoReading", odoReading);
         vehicle.put("color", color);
+        vehicle.put("promos", new ArrayList<String>());
 
-        FirebaseFirestore.getInstance()
-                .collection("vehicles")
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        db.collection("vehicles")
                 .add(vehicle)
                 .addOnSuccessListener(documentReference -> {
                     Toast.makeText(AddNewVehicleActivity.this, "Vehicle saved successfully", Toast.LENGTH_SHORT).show();
+                    appendToPromosCollection(userId, vehicleNumber);
                     finish();
                 })
                 .addOnFailureListener(e -> {
                     Toast.makeText(AddNewVehicleActivity.this, "Failed to save vehicle: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                });
+    }
+
+    private void appendToPromosCollection(String userId, String vehicleNumber) {
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        db.collection("Promos")
+                .document(userId)
+                .update("vehicleNumbers", FieldValue.arrayUnion(vehicleNumber))
+                .addOnSuccessListener(aVoid -> {
+                    Toast.makeText(AddNewVehicleActivity.this, "Vehicle number appended to promos collection", Toast.LENGTH_SHORT).show();
+                })
+                .addOnFailureListener(e -> {
+                    Toast.makeText(AddNewVehicleActivity.this, "Failed to append vehicle number to promos collection: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                 });
     }
 }

@@ -15,5 +15,8 @@
     <color name="menuTileBackground">#B3E6FF</color>
     <color name="menuTileBackground2">#96D9FA</color>
     <color name="menuTileBackground3">#77D0FB</color>
+    <color name="menuTileBackgroundDis">#8E8E8E</color>
+    <color name="menuTileBackground2Dis">#B8B8B8</color>
+    <color name="menuTileBackground3Dis">#9E9E9E</color>
 
 </resources>

@@ -1,20 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/account"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="@string/myAccount" />
+            android:title="@string/Menu"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/app_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
         <item
             android:id="@+id/settings"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/settings" />
+            android:title="@string/Settings"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/app_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
         <item
             android:id="@+id/logout"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/logout" />
+            android:title="@string/MyAccount"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/app_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
     </group>
 </menu>
