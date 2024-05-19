@@ -2,7 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.autoplus">
-
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <application
         android:allowBackup="true"
         android:icon="@drawable/img"
@@ -37,7 +40,10 @@
             android:theme="@style/Theme.AutoPlus.NoActionBar"/>
         <activity android:name=".AddNewVehicleActivity"
             android:theme="@style/Theme.AutoPlus.NoActionBar"/>
+        <activity android:name=".EmergencyServicesActivity"
+            android:theme="@style/Theme.AutoPlus.NoActionBar"/>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDHh85NFr5LGrUPajYGQsm4SobRRZrCnoU" />
     </application>
-
-
 </manifest>
