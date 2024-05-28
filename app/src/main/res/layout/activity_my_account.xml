@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/carbackground"
-    tools:context=".NewAppointmentActivity">
+    tools:context=".MyAccount">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -24,11 +24,11 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textViewNewAppointment"
+            android:id="@+id/textMyAccount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="52dp"
-            android:text="@string/add_new_appointment"
+            android:text="@string/MyAccount"
             android:textColor="@color/app_color"
             android:textSize="24sp"
             android:textStyle="bold"
@@ -37,55 +37,85 @@
             app:layout_constraintStart_toEndOf="@id/buttonBack"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Spinner
-            android:id="@+id/spinnerVehicle"
-            android:layout_width="0dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="24dp"
-            android:background="@android:drawable/btn_dropdown"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textViewNewAppointment"
-            tools:ignore="MissingConstraints" />
-
         <EditText
-            android:id="@+id/editTextDateTime"
+            android:id="@+id/edit_username"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:background="@drawable/edit_text_background"
-            android:clickable="true"
-            android:focusable="false"
-            android:hint="@string/select_an_available_date_and_time_slot"
+            android:hint="@string/username"
+            android:inputType="text"
             android:textColorHint="@color/embossed_text_color"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/spinnerVehicle"
+            app:layout_constraintTop_toBottomOf="@id/textMyAccount"
             tools:ignore="MissingConstraints" />
 
         <EditText
-            android:id="@+id/editTextOdoMeter"
+            android:id="@+id/edit_email"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:background="@drawable/edit_text_background"
-            android:hint="@string/enter_odo_meter_reading"
-            android:inputType="numberDecimal"
+            android:hint="@string/email_address"
+            android:inputType="textEmailAddress"
             android:textColorHint="@color/embossed_text_color"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/editTextDateTime"
+            app:layout_constraintTop_toBottomOf="@id/edit_username"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/edit_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/edit_text_background"
+            android:hint="@string/phone_number"
+            android:inputType="phone"
+            android:textColorHint="@color/embossed_text_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_email"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/edit_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/edit_text_background"
+            android:hint="@string/address"
+            android:inputType="textPostalAddress"
+            android:textColorHint="@color/embossed_text_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_phone"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/edit_identity_card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/edit_text_background"
+            android:hint="@string/phone_number"
+            android:inputType="text"
+            android:textColorHint="@color/embossed_text_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_address"
             tools:ignore="MissingConstraints" />
 
         <Button
-            android:id="@+id/buttonSaveAppointment"
+            android:id="@+id/buttonUpdate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="@string/save"
+            android:text="@string/update"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/editTextOdoMeter" />
+            app:layout_constraintTop_toBottomOf="@id/edit_identity_card" />
 
         <ProgressBar
             android:id="@+id/progressBar"
@@ -95,7 +125,7 @@
             android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textViewNewAppointment" />
+            app:layout_constraintTop_toBottomOf="@id/textMyAccount" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
