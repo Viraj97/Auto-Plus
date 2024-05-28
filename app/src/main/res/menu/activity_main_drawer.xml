@@ -6,27 +6,27 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/account"
-            android:title="@string/Menu"
+            android:textColor="@color/app_color"
             android:textSize="30sp"
             android:textStyle="bold"
-            android:textColor="@color/app_color"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            android:title="@string/MyAccount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
         <item
             android:id="@+id/settings"
-            android:title="@string/Settings"
+            android:textColor="@color/app_color"
             android:textSize="30sp"
             android:textStyle="bold"
-            android:textColor="@color/app_color"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            android:title="@string/Settings"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
         <item
             android:id="@+id/logout"
-            android:title="@string/MyAccount"
+            android:textColor="@color/app_color"
             android:textSize="30sp"
             android:textStyle="bold"
-            android:textColor="@color/app_color"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            android:title="@string/LogOut"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
     </group>
 </menu>

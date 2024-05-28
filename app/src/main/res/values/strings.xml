@@ -10,7 +10,20 @@
     <string name="Menu">Menu</string>
     <string name="Settings">Settings</string>
     <string name="MyAccount">MyAccount</string>
+    <string name="LogOut">Log Out</string>
 
     <string name="neuralCrusaders">Neural Crusaders</string>
     <string name="tm">TM</string>
+    <string name="go_to_previous_screen">Go to previous screen</string>
+    <string name="add_new_appointment">New Appointment</string>
+    <string name="select_an_available_date_and_time_slot">Select an available date and time slot</string>
+    <string name="enter_odo_meter_reading">Enter ODO meter reading (KM)</string>
+    <string name="save">Save</string>
+    <string name="request_vehicle_history">Request Vehicle History</string>
+    <string name="username">Username</string>
+    <string name="email_address">Email Address</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="address">Address</string>
+    <string name="update">Update</string>
+    <string name="enter_your_password">Enter your password</string>
 </resources>
